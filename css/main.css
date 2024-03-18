@@ -61,11 +61,15 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #ffd429;
-    transition: all 0.5;
+    position: relative;
+    /* 1 анимация с transition */
+    transition: all 0.35s;
 }
 
 .offer__button:hover {
-    background-color: yellow;
+    top: 3px;
+    box-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 5px black;
 }
 
 .header__image {
@@ -134,10 +138,15 @@ button {
     background-color: #ffd429;
     border-width: 1px;
     border-color: gray;
+    position: relative;
+    cursor: pointer;
+    /* 2 анимация с transition */
+    transition: all 0.35s;
 }
 
 button:hover {
     background-color: yellow;
+    font-size: 12px;
 }
 
 /* Footer */
@@ -152,4 +161,123 @@ footer {
     text-align: center;
     color: white;
     font-size: 13px;
+}
+
+/* 1 анимация с использованием правила keyFrames */
+
+.animation__keyFrames1 {
+    animation-name: lower;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes lower {
+    0% {
+        height: 60px;
+        width: 62px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    25% {
+        height: 45px;
+        width: 46.5px;
+        margin-top: 7.5px;
+        margin-bottom: 22.5px;
+    }
+    50% {
+        height: 30px;
+        width: 31px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    75% {
+        height: 45px;
+        width: 46.5px;
+        margin-top: 7.5px;
+        margin-bottom: 22.5px;
+    }
+    100% {
+        height: 60px;
+        width: 62px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* 2 анимация с использованием правила keyFrames */
+
+.animation_keyFrames2 {
+    animation-name: shift;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes shift {
+    0% {
+        left: 0;
+    }
+    12.5% {
+        left: -125px;
+    }
+    25% {
+        left: -250px;
+    }
+    37.5% {
+        left: -125px;
+    }
+    50% {
+        left: 0;
+    }
+    62.5% {
+        left: 125px;
+    }
+    75% {
+        left: 250px;
+    }
+    87.5% {
+        left: 125px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* 3 анимация с использованием keyFrames */
+
+.animation_keyFrames3 {
+    animation-name: bigger;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bigger {
+    0% {
+        height: 60px;
+        width: 62px;
+        margin-bottom: 15px;
+    }
+    25% {
+        height: 67.5px;
+        width: 69.75px;
+        margin-bottom: 7.5px;
+    }
+    50% {
+        height: 75px;
+        width: 77.5px;
+        margin-bottom: 0;
+    }
+    75% {
+        height: 67.5px;
+        width: 69.75px;
+        margin-bottom: 7.5px;
+    }
+    100% {
+        height: 60px;
+        width: 62px;
+        margin-bottom: 15px;
+    }
 }
